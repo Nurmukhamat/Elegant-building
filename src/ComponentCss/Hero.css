@@ -60,3 +60,27 @@ section {
   margin: 0;
   padding: 0;
 }
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+  .hero {
+    padding: 20px;
+    height: auto;
+    min-height: 100vh;
+  }
+  .hero-content {
+    padding: 15px;
+    max-width: 90%;
+  }
+  .hero h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
+  .hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  #future {
+    font-size: 24px;
+  }
+}

@@ -66,3 +66,69 @@ nav ul li a:active {
 body {
   padding-top: 80px;
 }
+
+
+/* Бургер-меню */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 1101;
+}
+
+.menu-toggle div {
+  width: 30px;
+  height: 4px;
+  background: white;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Навигация */
+nav.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav.container {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100vh;
+    background: rgba(40, 110, 160, 0.95);
+    flex-direction: column;
+    justify-content: center;
+    transition: left 0.3s ease-in-out;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1100;
+  }
+
+  nav.container.nav-active {
+    left: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav ul li {
+    margin: 15px 0;
+  }
+
+  nav ul li a {
+    font-size: 18px;
+    padding: 10px 15px;
+  }
+}
